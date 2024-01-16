@@ -6,11 +6,11 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:09:31 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/16 15:17:12 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/16 20:16:41 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScravTrap.hpp"
+#include "ScavTrap.hpp"
 
 //atributo estatico
 const unsigned int ScavTrap::_ScavHitPoints = 100;
@@ -49,7 +49,7 @@ void	ScavTrap::guardGate()
 	std::cout << "ScavTrap is now in keeper mode" << std::endl;
 }
 
-void	ScavTrap::scavAttack(std::string name)
+void	ScavTrap::attack(std::string name)
 {
 	if ((int)this->getEnergyPoints() <= 0 || (int)this->getHitPoints() <= 0)
 	{

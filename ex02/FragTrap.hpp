@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:11:04 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/16 15:13:31 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/16 20:12:07 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class FragTrap: public ClapTrap {
 		~FragTrap();
 		FragTrap(const ScavTrap& old);
 		FragTrap	&operator=(const FragTrap& fragtrap);
+		void	highFivesGuys(void);
+		void	attack(std::string name);
 };
 
 #endif

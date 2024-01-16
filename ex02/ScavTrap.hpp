@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:09:43 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/16 15:12:46 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/16 20:14:49 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class ScavTrap: public ClapTrap {
 		ScavTrap(const ScavTrap& old);
 		ScavTrap	&operator=(const ScavTrap& Scavtrap);
 		void	guardGate();
-		void	scavAttack(std::string name);
+		void	attack(std::string name);
 };
 
 #endif
