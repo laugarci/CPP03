@@ -6,13 +6,13 @@
 #    By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/14 13:17:51 by laugarci          #+#    #+#              #
-#    Updated: 2023/12/14 15:21:12 by laugarci         ###   ########.fr        #
+#    Updated: 2024/01/16 15:17:38 by laugarci         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = ClapTrap
 
-SRC_FILES = main.cpp Fixed.cpp
+SRC_FILES = main.cpp ClapTrap.cpp ScravTrap.cpp FlagCrap.cpp
 OBJ_DIR = objs/
 OBJ_FILES = $(SRC_FILES:.cpp=.o)
 OBJS = $(addprefix $(OBJ_DIR), $(OBJ_FILES))
