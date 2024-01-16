@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:01:28 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/16 09:58:15 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/16 15:04:16 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,15 @@ ClapTrap::ClapTrap(std::string name)
 	_hitPoints = 10;
 	_energyPoints = 10;
 	_attackDamage = 0;
+}
+
+ClapTrap::ClapTrap(std::string name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage)
+{
+	std::cout << "ClapTrap heritage constructor called" << std::endl;
+	_name = name;
+	_hitPoints = hitPoints;
+	_energyPoints = energyPoints;
+	_attackDamage = attackDamage;
 }
 
 ClapTrap::~ClapTrap()
@@ -97,4 +106,44 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << this->_name << " has regained " << amount << " hit points!" << std::endl;
 	this->_hitPoints += amount;
 	this->_energyPoints--;
+}
+
+int	ClapTrap::getHitPoints(void) const
+{
+	return (this->_hitPoints);
+}
+
+int	ClapTrap::getEnergyPoints(void) const
+{
+	return (this->_energyPoints);
+}
+
+int	ClapTrap::getAttackDamage(void) const
+{
+	return (this->_attackDamage);
+}
+
+std::string ClapTrap::getName(void) const
+{
+	return (this->_name);
+}
+
+void	ClapTrap::setName(std::string name)
+{
+	this->_name = name;
+}
+
+void	ClapTrap::setHitPoints(unsigned int hitPoints)
+{
+	this->_hitPoints = hitPoints;
+}
+
+void	ClapTrap::setEnergyPoints(unsigned int energyPoints)
+{
+	this->_energyPoints = energyPoints;
+}
+
+void	ClapTrap::setAttackDamage(unsigned int attackDamage)
+{
+	this->_attackDamage = attackDamage;
 }
