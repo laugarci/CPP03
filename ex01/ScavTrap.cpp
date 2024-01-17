@@ -6,17 +6,20 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:09:31 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/16 15:09:34 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/17 09:56:07 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScravTrap.hpp"
+#include "ScavTrap.hpp"
 
-//atributo estatico
 const unsigned int ScavTrap::_ScavHitPoints = 100;
 const unsigned int ScavTrap::_ScavAttack = 20;
 const unsigned int ScavTrap::_ScavEnergy = 50;
 
+ScavTrap::ScavTrap() : ClapTrap("Undefined", _ScavHitPoints, _ScavEnergy, _ScavAttack)
+{
+	std::cout << "ScavTrap constructor called" << std::endl;
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name, _ScavHitPoints, _ScavEnergy, _ScavAttack)
 {
@@ -57,6 +60,5 @@ void	ScavTrap::scavAttack(std::string name)
 		return ;
 	}
 	this->setEnergyPoints(this->getEnergyPoints() - 1);
-	std::cout << "Energy points: " << this->getEnergyPoints() << std::endl;
 	std::cout << "ScavTrap attacks " << name << " with " << this->getAttackDamage() << " points of damage!" << std::endl;
 }
