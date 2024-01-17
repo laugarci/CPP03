@@ -6,17 +6,20 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:09:31 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/16 20:16:41 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/17 09:53:17 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-//atributo estatico
 const unsigned int ScavTrap::_ScavHitPoints = 100;
 const unsigned int ScavTrap::_ScavAttack = 20;
 const unsigned int ScavTrap::_ScavEnergy = 50;
 
+ScavTrap::ScavTrap() : ClapTrap("Undefined", _ScavHitPoints, _ScavEnergy, _ScavAttack)
+{
+	std::cout << "ScavTrap constructor called" << std::endl;
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name, _ScavHitPoints, _ScavEnergy, _ScavAttack)
 {
@@ -36,7 +39,7 @@ ScavTrap::ScavTrap(const ScavTrap& old)
 
 ScavTrap	&ScavTrap::operator=( const ScavTrap& scavtrap )
 {
-	std::cout << "Scav copy assigment operator called" << std::endl;
+	std::cout << "ScavTrap copy assigment operator called" << std::endl;
 	this->setName( scavtrap.getName() );
 	this->setHitPoints( scavtrap.getHitPoints() );
 	this->setEnergyPoints( scavtrap.getEnergyPoints() );
@@ -57,6 +60,5 @@ void	ScavTrap::attack(std::string name)
 		return ;
 	}
 	this->setEnergyPoints(this->getEnergyPoints() - 1);
-	std::cout << "Energy points: " << this->getEnergyPoints() << std::endl;
 	std::cout << "ScavTrap attacks " << name << " with " << this->getAttackDamage() << " points of damage!" << std::endl;
 }
