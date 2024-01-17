@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:01:28 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/17 09:57:13 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:32:57 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ ClapTrap::ClapTrap()
 	_attackDamage = 0;
 }
 
-
 ClapTrap::ClapTrap(std::string name)
 {
+	_name = (name.empty() ? "Undefined" : name);
 	std::cout << "ClapTrap name constructor called" << std::endl;
-	_name = name;
 	_hitPoints = 10;
 	_energyPoints = 10;
 	_attackDamage = 0;
@@ -34,7 +33,7 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::ClapTrap(std::string name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage)
 {
 	std::cout << "ClapTrap heritage constructor called" << std::endl;
-	_name = name;
+	_name = (name.empty() ? "Undefined" : name);
 	_hitPoints = hitPoints;
 	_energyPoints = energyPoints;
 	_attackDamage = attackDamage;

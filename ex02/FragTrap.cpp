@@ -6,15 +6,11 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:13:26 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/17 09:53:24 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:35:52 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-
-const unsigned int FragTrap::_FragHitPoints = 100;
-const unsigned int FragTrap::_FragAttack = 30;
-const unsigned int FragTrap::_FragEnergy = 100;
 
 FragTrap::FragTrap() : ClapTrap("Undefined", _FragHitPoints, _FragEnergy, _FragAttack)
 {

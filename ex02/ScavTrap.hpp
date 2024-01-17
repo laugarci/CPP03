@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:09:43 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/16 20:14:49 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:35:24 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 
 class ScavTrap: public ClapTrap {
 	private:
-		static const unsigned int _ScavHitPoints;
-		static const unsigned int _ScavAttack;
-		static const unsigned int _ScavEnergy;
+		static const unsigned int _ScavHitPoints = 100;
+		static const unsigned int _ScavAttack = 20;
+		static const unsigned int _ScavEnergy = 50;
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);

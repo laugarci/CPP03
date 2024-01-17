@@ -6,15 +6,11 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:09:31 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/17 09:56:07 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:34:39 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-
-const unsigned int ScavTrap::_ScavHitPoints = 100;
-const unsigned int ScavTrap::_ScavAttack = 20;
-const unsigned int ScavTrap::_ScavEnergy = 50;
 
 ScavTrap::ScavTrap() : ClapTrap("Undefined", _ScavHitPoints, _ScavEnergy, _ScavAttack)
 {

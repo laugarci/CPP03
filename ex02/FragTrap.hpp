@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:11:04 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/17 09:42:44 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:35:47 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 
 class FragTrap: public ClapTrap {
 	private:
-		static const unsigned int _FragHitPoints;
-		static const unsigned int _FragAttack;
-		static const unsigned int _FragEnergy;
+		static const unsigned int _FragHitPoints = 100;
+		static const unsigned int _FragAttack = 30;
+		static const unsigned int _FragEnergy = 100;
 	public:
 		FragTrap();
 		FragTrap(std::string name);
