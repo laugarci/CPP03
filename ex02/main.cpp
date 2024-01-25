@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:44:20 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/17 09:51:13 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/25 10:35:30 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,16 @@
 
 int main(void)
 {
-	/*Objects*/
 	ClapTrap clap("Clap");
 	ScavTrap scav("Scav");
 	FragTrap frag("Frag");
 
-	ScavTrap scavNoname;
-	ClapTrap clapNoname;
-	FragTrap fragNoname;
-
-	/*Attack*/
+	std::cout << BGRED"[ ATTACK TEST ]" RESET<< std::endl;
 	scav.attack("Clap");
 	clap.attack("Frag");
 	frag.attack("Scav");
 
-
-	/*Take damage*/
+	std::cout << BGRED"[ TAKE DAMAGE TEST ]" RESET<< std::endl;
 	scav.takeDamage(5);
 	scav.takeDamage(5);
 	clap.takeDamage(5);
@@ -39,17 +33,17 @@ int main(void)
 	scav.takeDamage(100);
 	frag.takeDamage(60);
 
-	/*Be repaired*/
+	std::cout << BGRED"[ BE REPAIRED TEST ]" RESET<< std::endl;
 	scav.beRepaired(5);
 	clap.beRepaired(5);
 	frag.beRepaired(30);
 	
-	/*Guard gate (just scav)*/
+	std::cout << BGRED"[ GUARD GATE TEST ]" RESET<< std::endl;
 	scav.guardGate();
 //	frag.guardGate();
 //	clap.guardGate();
 
-	/*Give me five (just frag)*/
+	std::cout << BGRED"[ GIVE ME FIVE TEST ]" RESET<< std::endl;
 	frag.highFivesGuys();
 //	scav.highFivesGuys();
 //	clap.highFivesGuys();

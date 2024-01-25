@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:44:35 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/16 20:16:04 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/25 10:22:26 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@
 #include <iostream>
 #include <string>
 
+#define RESET "\x1B[0m"
+#define BGRED "\x1B[41m"
+
 class ClapTrap {
-	private:
+	protected:
 		std::string				_name;
 		unsigned int			_hitPoints;
 		unsigned int			_energyPoints;
