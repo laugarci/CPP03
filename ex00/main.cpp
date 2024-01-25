@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:44:20 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/15 11:07:50 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/25 09:43:43 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,18 @@ int main(void)
 	ClapTrap c ( a );
 	ClapTrap d ("D");
 
-	/*Take Damage test*/
+	std::cout << BGRED"[ TAKE DAMAGE TEST ]" RESET<< std::endl;
+	d.takeDamage(0);
 	c.takeDamage(8);
 	c.takeDamage(6);
 	c.takeDamage(2);
 	c.takeDamage(5);
+	a.takeDamage(3);
 	b = c;
 	b.takeDamage(1);
 	b.takeDamage(-5);
 
-	/*Attack test*/
+std::cout << BGRED"[ ATTACK TEST ]" RESET<< std::endl;	
 	d.attack("A");
 	d.attack("A");
 	d.attack("A");
@@ -42,7 +44,7 @@ int main(void)
 	d.attack("A");
 	d.attack("A");
 
-	/*be repaired test*/
+	std::cout << BGRED"[ BE REPAIRED TEST ]" RESET<< std::endl;
 	d.beRepaired(10);
 	a.beRepaired(5);
 	a.beRepaired(-5);

@@ -6,7 +6,7 @@
 /*   By: laugarci <laugarci@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:44:20 by laugarci          #+#    #+#             */
-/*   Updated: 2024/01/17 11:17:15 by laugarci         ###   ########.fr       */
+/*   Updated: 2024/01/25 10:07:24 by laugarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,22 @@ int main(void)
 	ScavTrap scavNoname;
 	ClapTrap clapNoname;
 
-	/*Attack*/
+	std::cout << BGRED"[ ATTACK TEST ]" RESET<< std::endl;
 	scav.attack("Clap");
 	clap.attack("Frag");
 
-
-	/*Take damage*/
+	std::cout << BGRED"[ TAKE DAMAGE TEST ]" RESET<< std::endl;
 	scav.takeDamage(5);
-	scav.takeDamage(5);
+	clap.takeDamage(1);
 	clap.takeDamage(5);
-	clap.takeDamage(10);
+	scav.takeDamage(100);
 	scav.takeDamage(100);
 
-	/*Be repaired*/
+	std::cout << BGRED"[ BE REPAIRED TEST ]" RESET<< std::endl;
 	scav.beRepaired(5);
 	clap.beRepaired(5);
 
-	/*Guard gate (just scav)*/
+	std::cout << BGRED"[ GUARD GATE TEST ]" RESET<< std::endl;
 	scav.guardGate();
 //	clap.guardGate();
 
